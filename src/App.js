@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Typewriter } from "react-simple-typewriter";
+import TonyImg from "./tony.jpg";
+// import "react-simple-typewriter/dist/index.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="background">
+      <img className="tony-img" src={TonyImg} />
+      <h1 className="text">
+        He is a{" "}
+        <span>
+          <Typewriter
+            words={["Genius.", "billionaire.", "playboy.", "philanthropist."]}
+            loop
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
+      </h1>
     </div>
   );
 }
